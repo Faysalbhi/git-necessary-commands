@@ -29,25 +29,25 @@
 
   ```bash
   # Show commit history
-  git log                    
+  git log
   
   # Compact one-line commit history
-  git log --oneline          
+  git log --oneline
   
   # Visual history with branches
-  git log --graph --oneline --decorate --all  
+  git log --graph --oneline --decorate --all
   
   # Show unstaged changes
-  git diff                   
+  git diff
   
   # Show staged changes vs last commit
-  git diff --staged          
+  git diff --staged
   
   # Compare two commits
   git diff <commit1> <commit2> 
   
   # Show changes in a specific commit
-  git show <commit>          
+  git show <commit>
   ```
     
 ### Basic Remote Operations
@@ -156,12 +156,12 @@
     git rebase --skip          # Skip current commit (use with caution)`
   ```
 ### Cherry-pick Specific Changes
-```bash
-    git cherry-pick <commit>   # Apply specific commit to current branch
-    git cherry-pick <commit1> <commit2> # Pick multiple commits
-    git cherry-pick <start>..<end> # Pick range of commits (exclusive)
-    git cherry-pick <start>^..<end> # Pick range inclusive of start`
- ```
+   ```bash
+       git cherry-pick <commit>   # Apply specific commit to current branch
+       git cherry-pick <commit1> <commit2> # Pick multiple commits
+       git cherry-pick <start>..<end> # Pick range of commits (exclusive)
+       git cherry-pick <start>^..<end> # Pick range inclusive of start`
+  ```
 ### Safe History Modification
     ```bash
         git revert <commit>        # Create undo commit (safe for shared history)
@@ -205,7 +205,7 @@
       git config --global init.defaultBranch main # Set default branch name`
   ```
 
-- Advanced Workflow Example
+### Advanced Workflow Example
     ```bash
         # Clean up feature branch before merge
         git switch feature/complex-feature
@@ -223,7 +223,7 @@
         git push origin v1.2.0
     ```
     ⚡ Quick Reference — Most Used Commands
-    ### Essential Daily Commands
+ ### Essential Daily Commands
     ```bash
       git status                 # What's the current state?
       git add .                  # Stage all changes
@@ -231,20 +231,20 @@
       git push                   # Share changes
       git pull                   # Get latest changes
     ```
-   ### Branch Operations
+ ### Branch Operations
     ```bash
       git switch -c new-feature  # Create and switch to new branch
       git branch -d old-branch   # Clean up merged branches
       git merge feature-branch   # Integrate completed feature`
     ```
-    ### Undo & Recovery
+ ### Undo & Recovery
     ```bash
       git reset --soft HEAD~1    # Undo last commit, keep changes
       git stash                  # Temporary save changes
       git reflog                 # Find lost commits`
     ```
     
-    ### History & Inspection
+ ### History & Inspection
     ```bash
       git log --oneline --graph --all  # Visualize project history
       git diff                   # See what changed
