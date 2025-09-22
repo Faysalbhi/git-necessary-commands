@@ -91,10 +91,10 @@
     ```
 ### Merging Strategies
   ```bash
-  git merge <branch>         # Merge branch into current branch
-  git merge --no-ff <branch> # Merge with commit (even if fast-forward)
-  git merge --squash <branch> # Squash all commits into one
-  git mergetool              # Use configured merge tool to resolve conflicts
+     git merge <branch>         # Merge branch into current branch
+     git merge --no-ff <branch> # Merge with commit (even if fast-forward)
+     git merge --squash <branch> # Squash all commits into one
+     git mergetool              # Use configured merge tool to resolve conflicts
   ```
 ### Advanced Remote Operations
     ```bash
