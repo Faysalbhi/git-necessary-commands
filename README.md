@@ -77,7 +77,7 @@
 **Goal:** Master branch management, merging strategies, and team collaboration
 
 ### Branch Management
-    ```bash
+    
       git branch                 # List all local branches
       git branch -r              # List remote branches
       git branch -a              # List all branches (local + remote)
@@ -88,16 +88,16 @@
       git checkout -b <name>     # Create and switch to new branch
       git switch <name>          # Newer way to switch branches
       git switch -c <name>       # Create and switch (newer syntax)
-    ```
+    
 ### Merging Strategies
-  ```bash
+  
      git merge <branch>         # Merge branch into current branch
      git merge --no-ff <branch> # Merge with commit (even if fast-forward)
      git merge --squash <branch> # Squash all commits into one
      git mergetool              # Use configured merge tool to resolve conflicts
-  ```
+  
 ### Advanced Remote Operations
-    ```bash
+    
       git fetch --all           # Fetch from all remotes
       git pull --rebase         # Fetch and rebase instead of merge
       git push -u origin <branch> # Push and set upstream (first time)
@@ -105,10 +105,10 @@
       git remote -v             # Show remote URLs
       git remote show origin    # Detailed remote information
       git remote add <name> <url> # Add new remote
-    ```
+    
 
 ### Stash Changes Temporarily
-    ```bash
+    
         git stash                  # Save uncommitted changes
         git stash push -m "message" # Stash with descriptive message
         git stash list             # List all stashes
@@ -117,9 +117,9 @@
         git stash apply stash@{1}  # Apply specific stash
         git stash drop             # Delete latest stash
         git stash clear            # Remove all stashes
-    ```
+    
 ### Undo Changes Safely
-   ```bash
+   
         git reset --soft HEAD~1    # Undo commit, keep changes staged
         git reset --mixed HEAD~1   # Undo commit, keep changes unstaged (default)
         git reset --hard HEAD~1    # Discard commit and changes (dangerous)
@@ -127,7 +127,7 @@
         git clean -fd              # Remove untracked files/directories
    ```
 ### Intermediate Workflow Example
-  ```bash
+  
     # Working on multiple features
     git switch main
     git pull origin main
@@ -148,46 +148,46 @@
 # 🔴 Advanced Level — History Manipulation & Complex Scenarios
 **Goal:** Master history rewriting, advanced recovery, and complex workflows
 ### Rebase for Clean History
-  ```bash
+  
     git rebase <branch>        # Replay current branch commits onto another branch
     git rebase -i HEAD~3       # Interactive rebase (squash, edit, reorder)
     git rebase --continue      # Continue after resolving conflicts
     git rebase --abort         # Abort rebase operation
     git rebase --skip          # Skip current commit (use with caution)`
-  ```
+  
 ### Cherry-pick Specific Changes
-   ```bash
+   
        git cherry-pick <commit>   # Apply specific commit to current branch
        git cherry-pick <commit1> <commit2> # Pick multiple commits
        git cherry-pick <start>..<end> # Pick range of commits (exclusive)
        git cherry-pick <start>^..<end> # Pick range inclusive of start`
-  ```
+  
 ### Safe History Modification
-    ```bash
+    
         git revert <commit>        # Create undo commit (safe for shared history)
         git revert --no-commit <commit> # Revert without auto-commit
         git revert -m 1 <merge-commit> # Revert a merge commit`
-    ```
+    
 
 ### Recovery & Investigation
-    ```bash
+    
         git reflog                 # Show all HEAD movements (recovery tool)
         git checkout -b recovery <sha> # Recover lost commits from reflog
         git bisect start           # Start binary search for bug introduction
         git bisect bad             # Mark current commit as bad
         git bisect good <commit>   # Mark known good commit
         git bisect reset           # End bisect session
-    ```
+    
 ### Code Investigation Tools
-    ```bash
+    
         git blame <file>           # Show author for each line
         git blame -L 10,20 <file>  # Blame specific lines (10 to 20)
         git blame -C <file>        # Detect moved/copied lines
         git log -S "string"        # Search commits that added/removed string
         git log -p <file>          # Show history with changes for specific file`
-    ```
+    
 ### Tagging & Releases
-    ```bash
+    
         git tag                    # List all tags
         git tag v1.0.0            # Create lightweight tag
         git tag -a v1.0.0 -m "Release version 1.0.0" # Annotated tag
@@ -195,18 +195,18 @@
         git push origin v1.0.0     # Push specific tag to remote
         git push origin --tags     # Push all tags to remote
         git checkout v1.0.0        # Checkout specific tag`
-    ```
+    
 
 ### Advanced Configuration
-  ```bash
+  
       git config --global alias.co checkout  # Create shortcut
       git config --global core.editor "code --wait" # Set VS Code as editor
       git config --global pull.rebase true   # Default to rebase on pull
       git config --global init.defaultBranch main # Set default branch name`
-  ```
+  
 
 ### Advanced Workflow Example
-    ```bash
+    
         # Clean up feature branch before merge
         git switch feature/complex-feature
         git rebase -i main
@@ -221,35 +221,35 @@
         # Create release
         git tag -a v1.2.0 -m "Release version 1.2.0"
         git push origin v1.2.0
-    ```
+    
     ⚡ Quick Reference — Most Used Commands
  ### Essential Daily Commands
-    ```bash
+    
       git status                 # What's the current state?
       git add .                  # Stage all changes
       git commit -m "message"    # Commit changes
       git push                   # Share changes
       git pull                   # Get latest changes
-    ```
+    
  ### Branch Operations
-    ```bash
+    
       git switch -c new-feature  # Create and switch to new branch
       git branch -d old-branch   # Clean up merged branches
       git merge feature-branch   # Integrate completed feature`
-    ```
+    
  ### Undo & Recovery
-    ```bash
+    
       git reset --soft HEAD~1    # Undo last commit, keep changes
       git stash                  # Temporary save changes
       git reflog                 # Find lost commits`
-    ```
+    
     
  ### History & Inspection
-    ```bash
+    
       git log --oneline --graph --all  # Visualize project history
       git diff                   # See what changed
       git blame <file>           # Who changed what?
-    ```
+    
     
 # 🎯 Pro Tips & Best Practices
   - Commit Message Convention
